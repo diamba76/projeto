@@ -5,3 +5,5 @@ class Documento(models.Model):
     descricao = models.CharField(max_length=200, blank=True)
     documento = models.FileField(upload_to='documents/')
 
+    def __str__(self):
+        return self.descricao

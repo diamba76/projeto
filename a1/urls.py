@@ -19,5 +19,4 @@ from django.contrib.auth.models import User
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', admin.site.urls),
 ]
