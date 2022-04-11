@@ -1,6 +1,24 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.views import View
+from .models import *
+from django.http import HttpResponse, HttpResponseRedirect
 
-@login_required
-def home(request):
-    return render(request, 'core/index.html')
+class Home(View):
+
+    def get(self, request):
+        return render(request, 'registration/login.html', context={"Nome": 'doglas'})
+
+    def post(self, request):
+        login = request.POST['login']
+        password = request.POST['password']
+        ObjPessLog = PessoaLogin.objects.filter(login=login, senha=password)
+        if not ObjPessLog:
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponseRedirect('index')
+
+
+class Index(View):
+
+    def get(self, request):
+        return render(request, 'index.html')
