@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 class Home(View):
 
     def get(self, request):
-        return render(request, 'registration/login.html', context={"Nome": 'doglas'})
+        return render(request, 'registration/login.html')
 
     def post(self, request):
         login = request.POST['login']
@@ -25,10 +25,7 @@ class Index(View):
         return render(request, 'index.html')
 
 
-class Login(View):
+class Registro(View):
 
     def get(self, request):
-        return render(request, 'registration/login.html')
-
-    def ramon(self, request):
-        return render(request, 'static/ramonzera.jpeg')
+        return render(request, 'registration/registro.html')

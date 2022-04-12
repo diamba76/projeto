@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'funcionario',
     'core',
     'templates',
-    'imagens',
 ]
 
 MIDDLEWARE = [
