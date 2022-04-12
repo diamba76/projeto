@@ -3,6 +3,7 @@ from django.views import View
 from .models import *
 from django.http import HttpResponse, HttpResponseRedirect
 
+
 class Home(View):
 
     def get(self, request):
@@ -28,7 +29,6 @@ class Login(View):
 
     def get(self, request):
         return render(request, 'registration/login.html')
-
 
     def ramon(self, request):
         return render(request, 'static/ramonzera.jpeg')
