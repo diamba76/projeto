@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'documentos',
     'funcionario',
     'core',
+    'templates',
+    'imagens',
 ]
 
 MIDDLEWARE = [
