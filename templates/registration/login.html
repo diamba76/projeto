@@ -12,20 +12,40 @@
     <div class="fadeIn first">
       <img src="https://cardpress.com.br/img/login.png" id="icon" alt="User Icon" />
     </div>
-    {% if Nome == ''%}
-      Olar
-    {% endif %}
 
     <!-- Login Form -->
-    <form action="" method="post">{% csrf_token %}
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="senha">
-      <input type="submit" class="fadeIn fourth" value="Entrar">
+    <form class="mx-4" method="post">{% csrf_token %}
+      <div>
+      {% include 'registration/mensagem.html' %}
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Login</span>
+        </div>
+        <input type="text" class="form-control" id="login" name="login"  placeholder="Login">
+
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Senha</span>
+        </div>
+        <input type="password" class="form-control" id="senha" name="password" placeholder="Password">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Entrar</button>
+      </div>
     </form>
+
+
+
+
+<!--      <i class="bi bi-person-circle"></i>-->
+
+<!--      <input type="submit" name="valide" value="Entrar">-->
+
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Esqueci minha senha</a><br/>
+      <a class="underlineHover" href="">Esqueci minha senha</a><br/>
       <a class="underlineHover" href="/registro">Criar Usuário</a><br/>
       <a class="underlineHover" href="/admin/">Administrador</a>
     </div>
