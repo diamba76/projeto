@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block main %}
-<form name="form" id="form" action="//" method="post"> #MANDAR PARA BANCO DE DADOS
+
+<div class="fadeIn first mb-3 my-3" align="middle">
+  <img src="{% static 'cadastro.jpeg' %}" height='445px'/>
+</div>
+<form name="form" id="form" action="//" method="post">
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
@@ -28,14 +32,6 @@
   <div class="form-outline mb-4">
     <input type="password" id="form3Example4" class="form-control" />
     <label class="form-label" for="form3Example4">Password</label>
-  </div>
-
-  <!-- Checkbox -->
-  <div class="form-check d-flex justify-content-center mb-4">
-    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-    <label class="form-check-label" for="form2Example33">
-      Subscribe to our newsletter
-    </label>
   </div>
 
   <!-- Submit button -->
