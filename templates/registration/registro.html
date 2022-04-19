@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block main %}
-
+<div class="border mt-5 px-5 pt-5 shadow rounded">
 <div class="fadeIn first mb-3 my-3" align="middle">
   <img src="{% static 'cadastro.jpeg' %}" height='445px'/>
 </div>
@@ -11,13 +11,13 @@
     <div class="col">
       <div class="form-outline">
         <input type="text" id="form3Example1" class="form-control" />
-        <label class="form-label" for="form3Example1">First name</label>
+        <label class="form-label" for="form3Example1">Nome</label>
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
         <input type="text" id="form3Example2" class="form-control" />
-        <label class="form-label" for="form3Example2">Last name</label>
+        <label class="form-label" for="form3Example2">Sobrenome</label>
       </div>
     </div>
   </div>
@@ -25,17 +25,18 @@
   <!-- Email input -->
   <div class="form-outline mb-4">
     <input type="email" id="form3Example3" class="form-control" />
-    <label class="form-label" for="form3Example3">Email address</label>
+    <label class="form-label" for="form3Example3">E-mail</label>
   </div>
 
   <!-- Password input -->
   <div class="form-outline mb-4">
     <input type="password" id="form3Example4" class="form-control" />
-    <label class="form-label" for="form3Example4">Password</label>
+    <label class="form-label" for="form3Example4">Senha</label>
   </div>
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4" onclick="ABC()">Cadastrar</button>
+  <button type="submit" class="btn btn-primary btn-block mb-4 pr-4" onclick="ABC()">Cadastrar</button>
   <a class="btn btn-primary btn-block mb-4" href="/">Voltar</a>
 </form>
+</div>
 {% endblock %}
