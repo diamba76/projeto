@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block main %}
-<div class="border mt-5 px-5 pt-5 shadow rounded">
-<div class="fadeIn first mb-3 my-3" align="middle">
-  <img src="{% static 'cadastro.jpeg' %}" height='445px'/>
+<div class="border mt-5 px-5 pt-5 shadow rounded bg-white ">
+<div class="fadeIn first mb-5" align="middle">
+  <img class="w-75 h-75" src="{% static 'cadastro.jpeg' %}"/>
 </div>
 <form name="form" id="form" action="//" method="post">
   <div class="row mb-4">
@@ -35,8 +35,11 @@
   </div>
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4 pr-4" onclick="ABC()">Cadastrar</button>
-  <a class="btn btn-primary btn-block mb-4" href="/">Voltar</a>
+  <div class="mb-4">
+    <a type="submit" class="btn btn-primary" onclick="ABC()">Cadastrar</a>
+    <a class="btn btn-primary btn-block" href="/">Voltar</a>
+  </div>
+
 </form>
 </div>
 {% endblock %}
